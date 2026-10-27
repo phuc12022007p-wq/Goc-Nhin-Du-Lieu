@@ -1,96 +1,108 @@
+  margin-block: 20px 90px;
+  border-radius: 28px;
+  color: #fff;
+  background: linear-gradient(120deg, #171c35, #343e91 75%, #4d5ce7);
+}
+.cta .eyebrow { color: #cdd3ff; }
+.cta h2 { max-width: 700px; color: #fff; }
+.cta p { max-width: 620px; margin-top: 14px; color: #e0e4ff; font-size: 15px; }
+.cta .btn { margin-top: 22px; color: var(--navy); background: #fff; }
+.cta-orb { position: absolute; z-index: -1; width: 250px; height: 250px; right: -50px; bottom: -100px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.04), 0 0 0 70px rgba(255,255,255,.03); }
 
-/* ==========================================
-   GOC NHIN DU LIEU - STYLE.CSS
-========================================== */
+/* CONCLUSION / THANK YOU */
+.academic-ending { padding-block: 0 80px; }
+.academic-ending-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: linear-gradient(135deg, #f7f8ff, #fff 70%);
+  text-align: center;
+}
+.academic-ending-thanks { color: var(--navy); font-size: clamp(30px, 4vw, 46px); font-weight: 850; line-height: 1.2; }
+.academic-ending-heart { margin-top: 12px; color: var(--blue); font-size: 26px; }
+.academic-ending-message { max-width: 720px; margin: 12px auto 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.academic-ending-signature { margin-top: 20px; color: var(--navy); font-weight: 800; }
+.academic-ending-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
 
-:root {
-  --navy: #171c35;
-  --blue: #4d5ce7;
-  --purple: #6778ef;
-  --green: #32bd9c;
-  --text: #1a2036;
-  --muted: #747f99;
-  --line: #e6eaf5;
-  --surface: #ffffff;
-  --soft: #f7f9ff;
-  --shadow: 0 24px 70px rgba(60, 77, 160, 0.11);
+/* FOOTER */
+footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+
+/* RESPONSIVE TABLET */
+@media (max-width: 1050px) {
+  .header { flex-wrap: wrap; justify-content: space-between; }
+  .header nav { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; gap: 14px 22px; }
+  .header > .btn { margin-left: auto; }
+  .hero { gap: 30px; }
+  .hero h1 { font-size: clamp(40px, 5vw, 58px); }
+  .overview { gap: 28px; }
+  .ticker { margin-bottom: 70px; }
+}
+@media (max-width: 800px) {
+  .wrap { width: min(100% - 36px, 680px); }
+  .header { min-height: 0; padding-block: 20px; }
+  .header nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding: 5px 0 10px; }
+  .header nav a { flex: 0 0 auto; }
+  .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 35px; padding-bottom: 48px; }
+  .hero-copy { max-width: 650px; }
+  .hero h1 { max-width: 650px; font-size: clamp(40px, 8vw, 60px); }
+  .hero-visual { width: 100%; }
+  .hero-canvas-wrap { height: 260px; }
+  .ticker { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 55px; }
+  .ticker > *:nth-child(2) { border-right: 0; }
+  .overview { grid-template-columns: 1fr; padding-bottom: 60px; }
+  .overview-copy { max-width: 650px; }
+  .dashboard { width: 100%; }
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .video-layout { grid-template-columns: 1fr; }
+  .video-info { max-width: 650px; }
+  .cta { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 520px) {
+  .wrap { width: calc(100% - 28px); }
+  .header { gap: 14px; }
+  .logo { font-size: 20px; letter-spacing: -.5px; }
+  .header > .btn { min-height: 40px; padding: 9px 12px; font-size: 12px; }
+  .header nav { gap: 16px; }
+  .header nav a { font-size: 12px; }
+  .hero { padding-top: 25px; gap: 28px; }
+  .eyebrow { margin-bottom: 12px; font-size: 10px; letter-spacing: 1.2px; }
+  .hero h1 { font-size: clamp(36px, 10vw, 48px); letter-spacing: -1.6px; }
+  .hero-copy > p:not(.eyebrow) { font-size: 14px; }
+  .actions { gap: 9px; }
+  .btn { min-height: 42px; padding: 10px 14px; font-size: 12px; }
+  .hero-chart { padding: 14px; border-radius: 20px; }
+  .hero-canvas-wrap { height: 220px; }
+  .float-pill { padding: 8px 10px; font-size: 10px; }
+  .pill-one { right: -4px; }
+  .pill-two { left: -4px; }
+  .ticker { gap: 8px; padding: 12px; border-radius: 17px; }
+  .ticker > * { padding: 8px; }
+  .ticker strong, .ticker b { font-size: 18px; }
+  .overview-copy h2, .section-head h2, .cta h2 { font-size: 31px; }
+  .dashboard { padding: 13px; border-radius: 20px; }
+  .dash-top { align-items: flex-start; }
+  .stats { gap: 8px; }
+  .stat { padding: 12px; border-radius: 13px; }
+  .stat strong, .stat b { font-size: 19px; }
+  .chart-card { padding: 11px; }
+  .main-chart { height: 260px; }
+  .dash-bottom { gap: 8px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature { padding: 21px; }
+  .abc-gallery { padding-block: 48px; }
+  .video-section, .features { padding-block: 48px; }
+  .video-info h3 { font-size: 23px; }
+  .cta { padding: 25px 20px; margin-bottom: 55px; border-radius: 21px; }
+  .academic-ending { padding-bottom: 50px; }
+  .academic-ending-panel { padding: 28px 18px; }
+  footer .wrap { align-items: flex-start; flex-direction: column; }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: var(--text);
-  background: #ffffff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-.wrap {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
-}
-
-/* THANH DIEU HUONG */
-
-.header {
-  min-height: 94px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: 800;
-  color: var(--navy);
-  white-space: nowrap;
-}
-
-.logo b {
-  color: var(--blue);
-}
-
-.header nav {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.header nav a {
-  font-size: 14px;
-  font-weight: 600;
-  color: #5d6882;
-  transition: color 0.2s;
-}
-
-.header nav a:hover {
-  color: var(--blue);
-}
-
-/* NUT BAM */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
