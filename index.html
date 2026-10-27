@@ -349,50 +349,121 @@
 
     <!-- 09. THÔNG TIN TÁC GIẢ -->
     <section class="author-section wrap" id="author">
-      <div class="author-card">
-        <div class="author-header">
-          <div class="author-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m2 10 10-5 10 5-10 5-10-5Z"></path>
-              <path d="M6 12v5c3.7 2.8 8.3 2.8 12 0v-5"></path>
-              <path d="M22 10v7"></path>
-            </svg>
-          </div>
-
-          <span class="author-eyebrow">THÔNG TIN TÁC GIẢ</span>
-          <h2>Người thực hiện dự án</h2>
-          <h3 class="author-name">Huỳnh Thanh Phúc</h3>
-          <p class="author-major">Sinh viên ngành Khoa học dữ liệu</p>
-          <p class="author-university">Trường Đại học Sư phạm – Đại học Đà Nẵng</p>
-        </div>
-
-        <div class="author-details">
-          <div class="author-detail-row">
-            <span>Học phần</span>
-            <strong>Python nâng cao</strong>
-          </div>
-          <div class="author-detail-row">
-            <span>Giảng viên hướng dẫn</span>
-            <strong>Phan Trần Đức </strong>
-          </div>
-          <div class="author-detail-row">
-            <span>Tên dự án</span>
-            <strong>Phân tích chứng khoán ABC-27</strong>
-          </div>
-          <div class="author-detail-row">
-            <span>Năm thực hiện</span>
-            <strong>2026</strong>
-          </div>
-        
-
-        <div class="author-signature">
-          <span>◈ Góc Nhìn Dữ Liệu</span>
-          <small>Khám phá dữ liệu</small>
-        </div>
+  <div class="author-split-card">
+    <div class="split-left">
+      <span class="eyebrow">DỰ ÁN KHOA HỌC DỮ LIỆU</span>
+      <h2>Huỳnh Thanh Phúc</h2>
+      <p class="role">Sinh viên Khoa học dữ liệu</p>
+      <p class="uni">Trường Đại học Sư phạm – Đại học Đà Nẵng</p>
+      
+      <div class="brand-mini">
+        ◈ <b>Góc Nhìn Dữ Liệu</b> <br>
+        <small>Khám phá dữ liệu</small>
       </div>
-    </section>
+    </div>
 
-  </main>
+    <div class="split-right">
+      <div class="detail-box">
+        <span class="label">Học phần</span>
+        <span class="val">Python nâng cao</span>
+      </div>
+      <div class="detail-box">
+        <span class="label">Giảng viên hướng dẫn</span>
+        <span class="val">Phan Trần Đức Minh</span>
+      </div>
+      <div class="detail-box">
+        <span class="label">Tên dự án</span>
+        <span class="val">Phân tích chứng khoán ABC-27</span>
+      </div>
+      <div class="detail-box">
+        <span class="label">Năm thực hiện</span>
+        <span class="val">2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.author-split-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: #ffffff;
+  border: 1px solid #e6eaf5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.split-left {
+  padding: 36px;
+  background: #f7f9ff;
+  border-right: 1px solid #e6eaf5;
+  display: flex;
+  flex-direction: column;
+}
+
+.split-left h2 {
+  font-size: 26px;
+  color: #171c35;
+  margin: 8px 0 4px;
+}
+
+.split-left .role {
+  color: #4d5ce7;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.split-left .uni {
+  color: #747f99;
+  font-size: 13px;
+}
+
+.brand-mini {
+  margin-top: auto;
+  padding-top: 24px;
+  font-size: 14px;
+  color: #171c35;
+}
+
+.brand-mini small {
+  color: #747f99;
+}
+
+.split-right {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.detail-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #e6eaf5;
+  border-radius: 10px;
+}
+
+.detail-box .label {
+  font-size: 13px;
+  color: #747f99;
+}
+
+.detail-box .val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #171c35;
+}
+
+@media (max-width: 768px) {
+  .author-split-card { grid-template-columns: 1fr; }
+  .split-left { border-right: none; border-bottom: 1px solid #e6eaf5; }
+}
+</style>
 
   <!-- FOOTER -->
   <footer class="footer wrap">
